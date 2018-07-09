@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Standalone Quiz ES5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="main.css">
+<script>
+        EBModulesToLoad = ['EBCMD'];
+    </script>
+	<script type="text/javascript" src="http://ds.serving-sys.com/BurstingScript/adKit/adkit.js"></script>
+
+	<!-- COMMENT THIS LINE OUT PRIOR TO UPLOADING / UNCOMMENT FOR LOCAL TESTING ONLY -->
+    <script type="text/javascript" src="scripts/localPreview.js"></script>
+</head>
+<body>
+   <div class="mainContainer">
+    <div class="adContainer">
+      <div id="slider">
+        <div id="quiz1"></div>
+        <div id="quiz2"></div>
+        <div id="quiz3"></div>
+        <div id="quiz4"></div>
+        <div id="quiz5"></div> 
+      </div>  
+      <span class="pagingInfo"></span>
+  </div>
+</div>
+     
+ 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript">
+  
+initSlideshow('slider'); 
+
+  createQuiz({
+    src2: 'images/black@2x.png',
+    question: 'Who was the first president of the United States? Test your civics knowledge.',
+    answers: ['George Washington', 'John Adams', 'Barack Obama'],
+    cta:'',
+    correctAnswerIndex: '0',
+    trivia: 'Washington was widely admired for his strong leadership qualities and was unanimously elected president by the Electoral College in the first two national elections.',
+    id: 'quiz1',
+    src: 'images/car-small1.png',
+    alt: 'Image alt text'
+  });
+
+  createQuiz({
+    src2: 'images/black@2x.png',
+    question: 'Who was the first president of the United States? Test your civics knowledge.',
+    answers: ['George Washington', 'John Adams', 'Barack Obama'],
+    cta:'',
+    correctAnswerIndex: '0',
+    trivia: 'Washington was widely admired for his strong leadership qualities and was unanimously elected president by the Electoral College in the first two national elections.',
+    id: 'quiz2',
+    src: 'images/car-small2.png',
+    alt: 'Image alt text'
+  });
+
+  createQuiz({
+    src2: 'images/black@2x.png',
+    question: 'Who was the first president of the United States? Test your civics knowledge.',
+    answers: ['George Washington', 'John Adams', 'Barack Obama'],
+    cta:'',
+    correctAnswerIndex: '0',
+    trivia: 'Washington was widely admired for his strong leadership qualities and was unanimously elected president by the Electoral College in the first two national elections.',
+    id: 'quiz3',
+    src: 'images/car-small3.png',
+    alt: 'Image alt text'
+  });
+
+  createQuiz({
+    src2: 'images/black@2x.png',
+    question: 'Who was the first president of the United States? Test your civics knowledge.',
+    answers: ['George Washington', 'John Adams', 'Barack Obama'],
+    cta:'',
+    correctAnswerIndex: '0',
+    trivia: 'Washington was widely admired for his strong leadership qualities and was unanimously elected president by the Electoral College in the first two national elections.',
+    id: 'quiz4',
+    src: 'images/car-small4.png',
+    alt: 'Image alt text'
+  });
+
+  createQuiz({
+    src2: 'images/black@2x.png',
+    question: 'Who was the first president of the United States? Test your civics knowledge.',
+    answers: [],
+    cta:'Click Here',
+    correctAnswerIndex: '0',
+    trivia: '',
+    id: 'quiz5',
+    src: 'images/car-small1.png',
+    alt: 'Image alt text'
+  });
+
+  </script>
+
+</body>
+</html>
