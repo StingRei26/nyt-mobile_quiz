@@ -105,8 +105,8 @@ width: 332px;
 }
 
 .answer {
-  border: 2px solid #959595;
-  margin: 15px auto 15px;
+  /*border: 2px solid #959595;*/
+  margin: 5px auto 10px;
   background-position: calc(100% - 22px) center;
   background-repeat: no-repeat;
   background-size: 24px 24px;
@@ -115,7 +115,7 @@ width: 332px;
   transition: border-color 0.3s, background-color 0.3s;
   width: 280px;
     height: 45px;
-    /* opacity: 0.4; */
+     /*opacity: 0.4; */
     border-radius: 9px;
     border: solid 1px #979797;
 }
@@ -128,7 +128,7 @@ width: 332px;
 }
 .answer label {
     display: block;
-    color: #3d3d3d;
+    /*color: #3d3d3d;*/
     color: var(--greyish-brown);
     cursor: pointer;
     font-family: Proxima N W01 Reg;
@@ -137,7 +137,9 @@ width: 332px;
     font-size: 18px;
     line-height: 28px;
     padding: 9px 56px 12px 22px;
+    /*color: #3d3d3d;*/
     color: #3d3d3d;
+    color: var(--greyish-brown);
 }
 .answer label.hidePointer {
   cursor: auto;
@@ -198,6 +200,7 @@ width: 332px;
   font-size: 14px;
   line-height: 21px;
   position: relative;
+  font-family:Proxima N W01 Reg;
 }
 @keyframes triviaAnim {
   0% {
@@ -229,7 +232,7 @@ width: 332px;
 
 .adContainer {
 border: 2px solid lightgray;
-height:600px;
+height:667px;
 width:100%;
 background-color: white;
 }
@@ -364,7 +367,9 @@ bottom: -149px;
   object-fit: cover;
 }
 
-
+.cta {
+  display:none;
+}
 
 /*Break points*/
 

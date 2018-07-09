@@ -6,7 +6,9 @@ var initSlideshow = function(id) {
  $('#' + id).slick({
    dots: true,
     infinite: false,
-    focusOnSelect: false
+    focusOnSelect: false,
+    speed: 50,
+    fade: true
   });
 }
 
