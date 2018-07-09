@@ -359,7 +359,17 @@ button:hover{
 }
 
 .slick-dots{
-bottom: -149px;
+
+position: absolute;
+    bottom: -25px;
+    /* display: block; */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    /* margin: 0px; */
+/*margin-bottom: 108px;    */
 }
 
 
