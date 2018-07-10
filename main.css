@@ -223,6 +223,7 @@ width: 332px;
   line-height: 21px;
   position: relative;
   font-family:Proxima N W01 Reg;
+  margin-top: -15px;
 }
 @keyframes triviaAnim {
   0% {
@@ -310,16 +311,32 @@ opacity:none!important;
 /*buttons */
 
 .slick-prev:before {
-  content: "<";
+  content: "";
   color:black;
   font-size: 30px;
+  background-image: url(images/left-arrow-black.svg);
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  zoom: 1.7;
+
 
 }
 
 .slick-next:before {
-  content: ">";
+  content: "";
   color:black;
   font-size: 30px;
+  background-image: url(images/right-arrow-black.svg);
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  zoom: 1.7;
+
+  
+  
   
 }
 
@@ -366,18 +383,29 @@ opacity:none!important;
   position: absolute;
     right: 0px;
     bottom: 0px;
-    margin-right: 329px;
-    /*margin-left:329px;*/
-    margin-bottom: 69px;
+    /* margin-right: 329px; */
+    /* margin-left: 329px; */
+    /* margin-bottom: 69px; */
     color: var(--greyish-brown);
     cursor: pointer;
     font-family: Proxima N W01 Reg;
     font-weight: 600;
-    transition: color 0.3s;
+    /* transition: color 0.3s; */
     font-size: 22px;
-    padding: 12px 26px 12px 22px;
-    /*border: 2px solid #959595;*/
-    border-radius: 5px;
+    /* padding: 12px 26px 12px 22px; */
+    /* border: 2px solid #959595; */
+    /* border-radius: 5px; */
+    width: 140px;
+    height: 40px;
+    border: solid 1px #000000;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.93;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #000000;
 }
 
 button{
@@ -404,7 +432,7 @@ position: fixed;
     /* margin-left: 0px; */
     /* margin-right: -23px; */
     right: 5px;
-    bottom: 299px;
+    bottom: 300px;
 
 }
 
@@ -413,7 +441,11 @@ position: fixed;
   object-fit: cover;
 }
 
-.cta {
+
+#quiz1 .cta,
+#quiz2 .cta,
+#quiz3 .cta,
+#quiz4 .cta {
   display:none;
 }
 

@@ -10,7 +10,21 @@ var initSlideshow = function(id) {
     speed: 50,
     fade: true
   });
-}
+
+
+var currentSlide = $('#slider').slick('slickCurrentSlide');
+  $('.slick-prev').toggle(currentSlide != 0);
+  $('.slick-next').toggle(currentSlide != 2);
+  
+  $('#slider').one('afterChange', function(){
+    $('.slick-prev,.slick-next').show();
+  });
+
+
+
+
+
+};
 
 /*code to change dots to numbers
 
