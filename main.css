@@ -303,16 +303,25 @@ opacity:none!important;
 
 
 .slick-prev {
-    left:260px;
-    margin-top: 224px;
+    left: 35px;
+    /* margin-top: 389px; */
     z-index: 1;
-    position:fixed; 
+    /*position: absolute;*/
+    /*bottom: 0px;*/
+    margin: 0px;
+    top: 621px;
 }
 .slick-next {
-    right: 260px;
-    margin-top: 224px;
+    /*margin-top: 158px; */
     z-index: 1;
-    position: fixed;
+    position: absolute;
+    right: 35px;
+    /* left: 320px; */
+    margin: 0px;
+    /* margin-bottom: 400px; */
+    /* bottom: 300px; */
+    /* padding-top: 300px; */
+    top: 621px;
     
 }
 
@@ -360,22 +369,20 @@ button:hover{
 }
 
 .slick-dots{
-
 position: fixed;
-    bottom: -25px;
     /* display: block; */
-    width: 100%;
-    padding: 0;
     margin: 0;
     list-style: none;
-    text-align: center;
+    /* text-align: center; */
     /* margin: 0px; */
-    /* margin-bottom: 108px; */
-    margin-bottom: 142px;
-    right: 0px;
-    left: 0px;
-    bottom: 0px;
+    z-index: 1;
     /* top: 0px; */
+    margin: 0px;
+    margin-bottom: 225px;
+    /* margin-left: 0px; */
+    /* margin-right: -23px; */
+    right: 5px;
+
 }
 
 
