@@ -303,15 +303,16 @@ opacity:none!important;
 
 
 .slick-prev {
-    left:72px;
-    margin-top: 336px;
+    left:260px;
+    margin-top: 224px;
     z-index: 1;
-    /*left:initial;   */
+    position:fixed; 
 }
 .slick-next {
-    right: 53px;
-    margin-top:337px;
-    z-index:1;
+    right: 260px;
+    margin-top: 224px;
+    z-index: 1;
+    position: fixed;
     
 }
 
@@ -360,7 +361,7 @@ button:hover{
 
 .slick-dots{
 
-position: absolute;
+position: fixed;
     bottom: -25px;
     /* display: block; */
     width: 100%;
@@ -369,7 +370,12 @@ position: absolute;
     list-style: none;
     text-align: center;
     /* margin: 0px; */
-/*margin-bottom: 108px;    */
+    /* margin-bottom: 108px; */
+    margin-bottom: 142px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    /* top: 0px; */
 }
 
 
