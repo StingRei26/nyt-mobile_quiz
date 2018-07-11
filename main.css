@@ -397,7 +397,7 @@ opacity:none!important;
     /* border-radius: 5px; */
     width: 140px;
     height: 40px;
-    border: solid 1px #000000;
+    border: 2px solid #959595;
     font-size: 15px;
     font-weight: bold;
     font-style: normal;
@@ -406,6 +406,11 @@ opacity:none!important;
     letter-spacing: 1px;
     text-align: center;
     color: #000000;
+    z-index: 1;
+    margin: 0px;
+    top: 321px;
+    left: 35px;
+    background-color: transparent;
 }
 
 button{
@@ -419,20 +424,31 @@ button:hover{
 }
 
 .slick-dots{
-position: fixed;
+/*position: fixed;*/
     /* display: block; */
-    margin: 0;
-    list-style: none;
+    /*margin: 0;
+    list-style: none;*/
     /* text-align: center; */
     /* margin: 0px; */
     /*z-index: 1;*/
     /* top: 0px; */
-    margin: 0px;
+    /*margin: 0px;*/
     /* margin-bottom: 160px; */
     /* margin-left: 0px; */
     /* margin-right: -23px; */
-    right: 5px;
-    bottom: 300px;
+    /*right: 5px;
+    bottom: 300px;*/
+
+z-index: 1;
+    position: absolute;
+    /*right: 35px;*/
+    /* left: 320px; */
+    margin: 0px;
+    /* margin-bottom: 400px; */
+    /* bottom: 300px; */
+    /* padding-top: 300px; */
+    top: 621px;
+
 
 }
 
