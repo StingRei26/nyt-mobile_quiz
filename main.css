@@ -413,15 +413,18 @@ opacity:none!important;
     background-color: transparent;
 }
 
+button:hover{
+  background-color: black;
+  color: white;
+}
+
 button{
 outline: none;
 border: 2px solid #959595;
 
 }
 
-button:hover{
-  background-color: #F1F1F1;
-}
+
 
 .slick-dots{
 /*position: fixed;*/
