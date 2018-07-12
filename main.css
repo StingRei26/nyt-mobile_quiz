@@ -216,7 +216,7 @@ width: 332px;
   display: none;
   overflow: hidden;
   max-height: 0;
-  padding: 0 41px;
+  padding: 0 36px;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
   font-size: 14px;
@@ -424,7 +424,29 @@ border: 2px solid #959595;
 
 }
 
+#quiz1 .header {
+position: absolute;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: Proxima N W01 Reg;
+    width: 336px;
+    height: 36px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    top: 221px;
+    left: 35px;
 
+    
+}
+
+#quiz1 .answers{
+margin-top:102px;
+}
+
+#quiz1 .question{
+position: absolute;
+    top: 265px;
+}
 
 .slick-dots{
 /*position: fixed;*/
@@ -450,7 +472,7 @@ z-index: 1;
     /* margin-bottom: 400px; */
     /* bottom: 300px; */
     /* padding-top: 300px; */
-    top: 621px;
+    top: 614px;
 
 
 }

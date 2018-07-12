@@ -95,6 +95,13 @@ var createQuiz =function createQuiz(props) {
     return img;
   };
 
+  self.renderHeader = function() {
+    var header = document.createElement("h3");
+    header.className = "header";
+    header.textContent = props.header;
+    return header;
+  };
+
   self.renderQuestion = function () {
     var question = document.createElement('h4');
     question.className = 'question';
@@ -178,8 +185,11 @@ var createQuiz =function createQuiz(props) {
       self.renderCTA(),
       self.renderLogo(),
       self.renderImage(),
+      self.renderHeader(),
       self.renderQuestion(),
+      
       self.renderAnswers(),
+      
       shouldRenderTrivia && self.renderTrivia()
     ]
       .filter(Boolean)
