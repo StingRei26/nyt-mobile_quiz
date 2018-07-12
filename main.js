@@ -182,13 +182,14 @@ var createQuiz =function createQuiz(props) {
 
     // Render each part of the quiz and append the returned elements to `root`
     [
-      self.renderCTA(),
+      self.renderImage(), // Render the image first to clear other elements...
       self.renderLogo(),
-      self.renderImage(),
-      self.renderHeader(),
+      self.renderHeader(), // ...and render the header _after_ the logo
+      self.renderCTA(),
       self.renderQuestion(),
-      
       self.renderAnswers(),
+      
+      
       
       shouldRenderTrivia && self.renderTrivia()
     ]

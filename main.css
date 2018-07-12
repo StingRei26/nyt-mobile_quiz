@@ -66,18 +66,19 @@
 
 .question {
 width: 332px;
-  height: 41px;
-  font-family: Proxima N W01 Reg;
-  font-size: 16px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.25;
-  letter-spacing: normal;
-  text-align: left;
-  color: #3d3d3d;
-  color: var(--greyish-brown);
-  margin-left:35px
+    height: 41px;
+    font-family: Proxima N W01 Reg;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #3d3d3d;
+    color: var(--greyish-brown);
+    margin-left: 35px;
+    
   
 }
 
@@ -216,14 +217,18 @@ width: 332px;
   display: none;
   overflow: hidden;
   max-height: 0;
-  padding: 0 36px;
-  color: rgba(0, 0, 0, 0.8);
+  padding: 0 35px;
+  /*color: rgba(0, 0, 0, 0.8);*/
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   position: relative;
   font-family:Proxima N W01 Reg;
   margin-top: -15px;
+  color: #737373;
+  /*color: var(--warm-grey);*/
+  font-style: italic;
+
 }
 @keyframes triviaAnim {
   0% {
@@ -344,7 +349,7 @@ opacity:none!important;
 .slick-prev {
     left: 35px;
     /* margin-top: 389px; */
-    z-index: 1;
+    z-index: 999;
     /*position: absolute;*/
     /*bottom: 0px;*/
     margin: 0px;
@@ -352,7 +357,7 @@ opacity:none!important;
 }
 .slick-next {
     /*margin-top: 158px; */
-    z-index: 1;
+    z-index: 999;
     position: absolute;
     right: 35px;
     /* left: 320px; */
@@ -364,6 +369,14 @@ opacity:none!important;
     
 }
 
+
+/*#quiz1 .slick-prev {
+  z-index: 999!important;
+}
+
+#quiz1 .slick-next{
+  z-index: 999!important;
+}*/
 
 /*for the 1 of 5 modifications*/
 
@@ -435,6 +448,10 @@ position: absolute;
     letter-spacing: 1px;
     top: 221px;
     left: 35px;
+    margin: auto;
+    /* margin-top: 20px; */
+    /* margin-bottom: 0px; */
+    padding-top: 20px;
 
     
 }
@@ -478,9 +495,19 @@ z-index: 1;
 }
 
 
+.slick-dots li {
+    margin: 0 -3px;
+
+}
+
 .image{
   object-fit: cover;
+  
+  
 }
+
+
+
 
 
 #quiz1 .cta,
