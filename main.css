@@ -34,12 +34,17 @@
   height:220px;
   max-width:375px;
   margin-bottom: 19px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0)), url();
+  
+
 }
 .image img {
   display: block;
   width: 100%;
   margin: 0 auto;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0)), url();
 }
+
 
 .Logoimage{
   display: block;
@@ -54,6 +59,7 @@
     width: 133px;
     height: 46px;
     object-fit: contain;
+   
 }
 
 /*.Logoimage img {
@@ -78,6 +84,8 @@ width: 332px;
     color: #3d3d3d;
     color: var(--greyish-brown);
     margin-left: 35px;
+    position: absolute;
+    top: 219px;
     
   
 }
@@ -224,7 +232,7 @@ width: 332px;
   line-height: 21px;
   position: relative;
   font-family:Proxima N W01 Reg;
-  margin-top: -15px;
+  margin-top: -20px;
   color: #737373;
   /*color: var(--warm-grey);*/
   font-style: italic;
@@ -502,6 +510,7 @@ z-index: 1;
 
 .image{
   object-fit: cover;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   
   
 }

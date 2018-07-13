@@ -79,11 +79,11 @@ var createQuiz =function createQuiz(props) {
   };
 
   self.renderLogo = function () {
-    var img = document.createElement('img');
-    img.className = 'Logoimage';
-    img.src = self.props.src2;
-    img.alt = self.props.alt;
-    return img;
+    var imglogo = document.createElement('img');
+    imglogo.className = 'Logoimage';
+    imglogo.src = self.props.src2;
+    imglogo.alt = self.props.alt;
+    return imglogo;
   };
 
 
@@ -188,6 +188,7 @@ var createQuiz =function createQuiz(props) {
       self.renderCTA(),
       self.renderQuestion(),
       self.renderAnswers(),
+     
       
       
       
@@ -203,4 +204,6 @@ var createQuiz =function createQuiz(props) {
   self.render();
   return self;
 };
+
+
 
