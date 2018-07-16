@@ -267,7 +267,7 @@ width: 332px;
 
 
 .adContainer {
-border: 2px solid lightgray;
+/*border: 2px solid lightgray;*/
 height:667px;
 width:100%;
 background-color: white;
@@ -418,7 +418,7 @@ opacity:none!important;
     /* border-radius: 5px; */
     width: 140px;
     height: 40px;
-    border: 2px solid #959595;
+    border: 1px solid #000000;
     font-size: 15px;
     font-weight: bold;
     font-style: normal;
