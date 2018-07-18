@@ -134,6 +134,8 @@ var createQuiz = function createQuiz(props) {
     triviaEl.className = ['trivia', self.state.selectedAnswerIndex && 'hasTransition'].filter(Boolean).join(' ');
     triviaEl.textContent = self.props.trivia;
     return triviaEl;
+
+    console.log("trivia render");
   };
 
   self.render = function () {
