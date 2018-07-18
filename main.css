@@ -14,21 +14,19 @@
 
 
 .root {
- /* border-top: 2px solid rgba(147, 149, 151, 0.5);*/
-  /*border-bottom: 2px solid rgba(147, 149, 151, 0.5);*/
   font-family: inherit;
 }
+
 .root.dark {
   border-color: rgba(108, 106, 104, 0.5);
 }
-
 
 body {
   margin: 0px;
   padding: 0px;
 }
 
-.mainContainer{
+.mainContainer {
   display: none;
   margin:auto;
   width:100%;
@@ -38,18 +36,44 @@ body {
   height: 100%;
   max-height:824px;
   min-height: 550px;
-  border: 2px solid lightgray;
-  /* overflow: hidden; */
-  }
+  
+  border: 2px solid rgb(236, 236, 236);
+  overflow: hidden;
+}
 
 
-
-.adContainer {
+.mainContainer .adContainer {
   height:100%;
   width:100%;
-  max-width: 414px;
-  min-width: 350px;
   background-color: white;
+}
+
+.mainContainer .adContainer #gradient-below-logo {
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+
+.mainContainer .adContainer #logo {
+  /* background-image: url(../images/white@2x.png); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 45px;
+  width: 100%;
+  max-width: 140px;
+  position: absolute;
+  z-index: 99999;
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-top: 20px;
+
 }
 
 #slider {
@@ -90,18 +114,18 @@ body {
 
 .Logoimage{
   display: block;
-    width: 70px;
-    height: 25px;
-    /* margin: 36px auto 0; */
-    /* float: right; */
-    position: absolute;
-    /* margin-right: 354px; */
-    margin-top: 35px;
-    margin-left: 35px;
-    width: 133px;
-    height: 46px;
-    object-fit: contain;
-   
+  width: 70px;
+  height: 25px;
+  /* margin: 36px auto 0; */
+  /* float: right; */
+  position: absolute;
+  /* margin-right: 354px; */
+  margin-top: 35px;
+  margin-left: 35px;
+  width: 133px;
+  height: 46px;
+  object-fit: contain;
+
 }
 
 /*.Logoimage img {
@@ -110,49 +134,46 @@ body {
   margin: 0 auto;
   height:55px;
   width:43px;
-}*/
+}*/ 
 
 .question {
-width: 332px;
-    height: 41px;
-    font-family: Proxima N W01 Reg;
-    font-size: 16px;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    text-align: left;
-    color: #3d3d3d;
-    color: var(--greyish-brown);
-    margin-left: 35px;
-    position: absolute;
-    top: 219px;
-    
-  
+  width: 332px;
+  height: 41px;
+  font-family: Proxima N W01 Reg;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3d3d3d;
+  color: var(--greyish-brown);
+  margin-left: 20px;
+  position: absolute;
+  top: 219px;
 }
 
 /********************
  * ANSWERS
  ********************/
+
+
 .answers {
-  
-   list-style-type: none;
-    width: 100%;
-    /* right: 0px; */
-    /* margin-left: 500px; */
-    /* float: right; */
-    max-width: 280px;
-    margin: auto;
-    /* margin-right: 212px; */
-    /* position: relative; */
-    /* padding: 0px; */
-    left: 0px;
-    display: inline-block;
-    padding-left: 34px;
-    margin-top: 48px;
- 
-  
+  list-style-type: none;
+  width: 100%;
+  /* right: 0px; */
+  /* margin-left: 500px; */
+  /* float: right; */
+  max-width: 280px;
+  margin: auto;
+  /* margin-right: 212px; */
+  /* position: relative; */
+  /* padding: 0px; */
+  left: 0px;
+  display: inline-block;
+  padding-left: 20px;
+  margin-top: 48px;
 }
 
 .answer {
@@ -393,7 +414,7 @@ width: 332px;
     z-index: 1;
     margin: 0px;
     top: 321px;
-    left: 35px;
+    left: 20px;
     background-color: transparent;
 }
 
@@ -418,7 +439,7 @@ position: absolute;
     font-size: 14px;
     letter-spacing: 1px;
     top: 221px;
-    left: 35px;
+    left: 20px;
     margin: auto;
     /* margin-top: 20px; */
     /* margin-bottom: 0px; */

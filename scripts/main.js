@@ -1,44 +1,37 @@
 
 'use strict';
 
-  
 console.group("mobileFXL-logs");
 
 var correctAnswerQueue = [];
+//var slideCounter = $(".slider").slick("getSlick").slideCount;
 
 
-var slideCounter = $(".slider").slick("getSlick").slideCount;
-
+// function to start slick gallery ---------------
 var initSlideshow = function(id) {
+  console.log("init slideshow");
 
-console.log("init slideshow");
-  
- $('#' + id).slick({
-  dots: true,
-  infinite: false,
-  focusOnSelect: false,
-  speed: 50,
-  fade: true
-  });
+  $('#' + id).slick({dots: true,infinite: false,focusOnSelect: false,speed: 50,fade: true});  // initiating slick gallery
 
-var currentSlide = $('#slider').slick('slickCurrentSlide');
+  var currentSlide = $('#slider').slick('slickCurrentSlide');
   $('.slick-prev').toggle(currentSlide != 0);
   $('.slick-next').toggle(currentSlide != 2);
   $('#slider').one('afterChange', function(){$('.slick-prev,.slick-next').show();});
 };
 
 
-var createQuiz =function createQuiz(props) {
+var createLogo = function (logoSrc) { $("#logo").css("background-image", "url('"+ logoSrc + "')");}  // dynamically setting the logo as background image
+
+var createQuiz = function createQuiz(props) {
   var self = {};
 
   self.props = props;
   self.state = {selectedAnswerIndex: undefined};
-
+  
   correctAnswerQueue.push(props.correctAnswerIndex);
 
   self.handleChange = function (event) {
     event.preventDefault();
-
     if (!self.state.selectedAnswerIndex) {
       console.log("selected index number: ",event.currentTarget.value);
       self.state.selectedAnswerIndex = event.currentTarget.value;
@@ -46,13 +39,13 @@ var createQuiz =function createQuiz(props) {
     }
   };
 
-  self.renderLogo = function () {
-    var imglogo = document.createElement('img');
-    imglogo.className = 'Logoimage';
-    imglogo.src = self.props.src2;
-    imglogo.alt = self.props.alt;
-    return imglogo;
-  };
+  // self.renderLogo = function () {
+  //   var imglogo = document.createElement('img');
+  //   imglogo.className = 'Logoimage';
+  //   imglogo.src = self.props.src2;
+  //   imglogo.alt = self.props.alt;
+  //   return imglogo;
+  // };
 
 
   self.renderImage = function () {
@@ -156,7 +149,7 @@ var createQuiz =function createQuiz(props) {
     // Render each part of the quiz and append the returned elements to `root`
     [
       self.renderImage(), // Render the image first to clear other elements...
-      self.renderLogo(),
+     // self.renderLogo(),
       self.renderHeader(), // ...and render the header _after_ the logo
       self.renderCTA(),
       self.renderQuestion(),
@@ -184,8 +177,9 @@ function init (adData) {
 
   initSlideshow('slider'); 
 
+  createLogo('images/white@2x.png');
+
   createQuiz({
-    src2: 'images/white@2x.png',
     question: 'Who was the first president of the United States? Test your civics knowledge.',
     answers: ['George Washington', 'John Adams', 'Barack Obama'],
     cta:'',
@@ -198,7 +192,6 @@ function init (adData) {
   });
 
   createQuiz({
-    src2: 'images/white@2x.png',
     question: 'Who was the first president of the United States? Test your civics knowledge.',
     answers: ['George Washington', 'John Adams', 'Barack Obama'],
     cta:'',
@@ -210,7 +203,6 @@ function init (adData) {
   });
 
   createQuiz({
-    src2: 'images/white@2x.png',
     question: 'Who was the first president of the United States? Test your civics knowledge.',
     answers: ['George Washington', 'John Adams', 'Barack Obama'],
     cta:'',
@@ -222,7 +214,6 @@ function init (adData) {
   });
 
   createQuiz({
-    src2: 'images/white@2x.png',
     question: 'Who was the first president of the United States? Test your civics knowledge.',
     answers: ['George Washington', 'John Adams', 'Barack Obama'],
     cta:'',
@@ -234,7 +225,6 @@ function init (adData) {
   });
 
   createQuiz({
-    src2: 'images/white@2x.png',
     question: 'Who was the first president of the United States? Test your civics knowledge.',
     answers: [],
     cta:'Click Here',
