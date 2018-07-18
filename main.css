@@ -276,12 +276,11 @@ body {
 /********************
  * ANSWER TRIVIA
  ********************/
-.trivia {
+/* .trivia {
   display: none;
   overflow: hidden;
   max-height: 0;
   padding: 0 20px;
-  /*color: rgba(0, 0, 0, 0.8);*/
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -289,9 +288,26 @@ body {
   font-family: Proxima N W01 Reg;
   margin-top: -20px;
   color: #737373;
-  /*color: var(--warm-grey);*/
   height: auto;
-  font-style: italic; }
+  font-style: italic; 
+} */
+
+.trivia {
+  /* display: none; */
+  overflow: hidden;
+  /* max-height: 0; */
+  padding: 0 20px;
+  /*color: rgba(0, 0, 0, 0.8);*/
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  position: relative;
+  font-family: Proxima N W01 Reg;
+  margin-top: 5px;
+  color: #737373;
+  height: auto;
+  font-style: italic; 
+}
 
 @-webkit-keyframes triviaAnim {
   0% {

@@ -131,7 +131,8 @@ var createQuiz = function createQuiz(props) {
 
   self.renderTrivia = function () {
     var triviaEl = document.createElement('div');
-    triviaEl.className = ['trivia', self.state.selectedAnswerIndex && 'hasTransition'].filter(Boolean).join(' ');
+   // triviaEl.className = ['trivia', self.state.selectedAnswerIndex && 'hasTransition'].filter(Boolean).join(' ');
+    triviaEl.classList.add("trivia");
     triviaEl.textContent = self.props.trivia;
     return triviaEl;
 
