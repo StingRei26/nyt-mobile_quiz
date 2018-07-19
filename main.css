@@ -439,14 +439,18 @@ button {
   margin: auto;
   /* margin-top: 20px; */
   /* margin-bottom: 0px; */
-  padding-top: 10px; }
+  padding-top: 1px; }
 
 #quiz1 .answers {
-  margin-top: 73px; }
+  margin-top: 59px; }
 
 #quiz1 .question {
   position: absolute;
-  top: 240px; }
+  top: 228px; }
+
+#quiz1 .trivia {
+  margin-top: -1px;
+}
 
 #quiz1 .cta,
 #quiz2 .cta,
