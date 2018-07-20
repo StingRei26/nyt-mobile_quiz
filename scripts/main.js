@@ -230,7 +230,7 @@ function init (adData) {
   createQuiz({
     question: 'Who was the first president of the United States? Test your civics knowledge.',
     answers: [],
-    cta:'Click Here',
+    cta:'LEARN MORE',
     correctAnswerIndex: '0',
     trivia: '',
     id: 'quiz5',

@@ -124,13 +124,13 @@ body {
 }*/
 .question {
   width: 332px;
-  height: 41px;
+  height: 51px;
   font-family: Proxima N W01 Reg;
   font-size: 14px;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.25;
+  line-height: 1.21;
   letter-spacing: normal;
   text-align: left;
   color: #3d3d3d;
@@ -191,12 +191,15 @@ body {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.44;
   padding: 9px 56px 12px 22px;
   /*color: #3d3d3d;*/
   color: #3d3d3d;
   color: var(--greyish-brown);
-  padding-top: 6px; }
+  padding-top: 6px; 
+  letter-spacing: normal;
+
+  }
 
 .answer label.hidePointer {
   cursor: auto; }
@@ -300,7 +303,7 @@ body {
   /*color: rgba(0, 0, 0, 0.8);*/
   font-weight: 400;
   font-size: 13px;
-  line-height: 21px;
+  line-height: 1.15;
   position: relative;
   font-family: Proxima N W01 Reg;
   margin-top: 5px;
@@ -385,21 +388,14 @@ body {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  /* margin-right: 329px; */
-  /* margin-left: 329px; */
-  /* margin-bottom: 69px; */
   color: var(--greyish-brown);
   cursor: pointer;
   font-family: Proxima N W01 Reg;
   font-weight: 600;
-  /* transition: color 0.3s; */
   font-size: 22px;
-  /* padding: 12px 26px 12px 22px; */
-  /* border: 2px solid #959595; */
-  /* border-radius: 5px; */
   width: 140px;
   height: 40px;
-  border: 2px solid #959595;
+  border: solid 1px #000000;
   font-size: 15px;
   font-weight: bold;
   font-style: normal;
@@ -433,13 +429,18 @@ button {
   width: 336px;
   /* height: 36px; */
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0.ppx;
   top: 221px;
   left: 20px;
   margin: auto;
   /* margin-top: 20px; */
   /* margin-bottom: 0px; */
-  padding-top: 1px; }
+  padding-top: 1px; 
+  line-height: 1.67;
+
+  
+  
+  }
 
 #quiz1 .answers {
   margin-top: 59px; }
@@ -450,6 +451,7 @@ button {
 
 #quiz1 .trivia {
   margin-top: -1px;
+  line-height: 1.15;
 }
 
 #quiz1 .cta,
