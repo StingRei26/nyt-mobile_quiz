@@ -5,8 +5,8 @@
 
 // ------------------------------------------------------------- variable needed for 
 
-// var localPreview = true;
-// localPreview = document.location === top.location;
+var localPreview = true;
+localPreview = document.location === top.location;
 
 
 var creativeId = "HTMLResponsiveRichMediaBanner";
@@ -123,10 +123,10 @@ function eventManager(event) {
 
 
 function sendMessage(type, data) {
-	console.group("send-message");
-	console.log("type: ", type);
-	console.log("data object: ", data);
-	console.groupEnd();
+	//console.group("send-message");
+	//console.log("type: ", type);
+	//console.log("data object: ", data);
+	//console.groupEnd();
 
 	if (!data.type) data.type = type;
 	EB._sendMessage(type, data);
@@ -172,7 +172,7 @@ function checkIfAdKitReady(event) {
 
 
 function initializeCreative(event) {
-	console.log("initialize creative");
+	//console.log("initialize creative");
 	var viewportMeta = document.querySelector('meta[name="viewport"]');
 	viewportMeta.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0");
 
@@ -190,7 +190,7 @@ function initializeCreative(event) {
 }
 
 function setCreativeElements () {
-	console.log("window width: ",window.innerWidth);
+	//console.log("window width: ",window.innerWidth);
 	if (window.innerWidth < 600) {
 		sizeContentArea(null);
 	}
@@ -198,36 +198,36 @@ function setCreativeElements () {
 
 
 function sizeContentArea(data) {
-	console.group("resizeAdFrame-FXL-mobile");
+	//console.group("resizeAdFrame-FXL-mobile");
 	var adWrapper = document.getElementById("ad-stage");
 	var winW;
 	var winH;
 
 	// first check for parent div
 	try {
-		console.log("successfully access the parent width");
+		//console.log("successfully access the parent width");
 		winW = document.body.ownerDocument.defaultView.frameElement.parentElement.parentElement.parentElement.offsetWidth;
 	} 
 	catch (Error) {
 		// second check for safe frame width
 		if (data && typeof data.sfGeomObj !== "undefined") {
 			winW = data.sfGeomObj.win.w;
-			console.log("safe frame width: ", winW);
+			//console.log("safe frame width: ", winW);
 		}
 
 		// third check for window width
 		else {
-			console.log(" safeframe wasn't successful, moving into calculated width")
+			//console.log(" safeframe wasn't successful, moving into calculated width")
 			winW = window.innerWidth;
 		}
 	}
 
 	if (data && typeof data.sfGeomObj !== "undefined") {
 		winH = data.sfGeomObj.win.h;
-		console.log("safe frame width: ", winH);
+		//console.log("safe frame width: ", winH);
 	}
 	else {
-		console.log(" safeframe wasn't successful, moving into calculated height")
+		//console.log(" safeframe wasn't successful, moving into calculated height")
 		winH = Math.round(winW * 1.7 - 40); 
 	}
 
@@ -235,10 +235,10 @@ function sizeContentArea(data) {
 	adWrapper.style.width = winW + "px";
 	adWrapper.style.height = winH + "px";
 
-	console.log("ad width: ", winW);
-	console.log("ad height: ", winH);
+	//console.log("ad width: ", winW);
+	//console.log("ad height: ", winH);
 
-	console.groupEnd();
+	//console.groupEnd();
 
   }
 

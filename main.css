@@ -159,7 +159,7 @@ body {
   margin-top: 48px; }
 
 .answer {
-  /*border: 2px solid #959595;*/
+  border: 2px solid #000000;
   margin: 5px auto 10px;
   background-position: calc(100% - 22px) center;
   background-repeat: no-repeat;
