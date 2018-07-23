@@ -272,6 +272,17 @@ function init (adData) {
     src: 'images/car-small1.png',
     alt: 'Image alt text'
   });
+
+
+
+  $(document).ready(function() {
+    $(".image").click(function() {exits ("background");});
+    $(".mainContainer .adContainer #gradient-below-logo").click(function() {exits ("logo");});
+    $(".cta").click(function() {exits ("cta");});
+
+  }); 
+
+  
 }  // end of init function
 
 
