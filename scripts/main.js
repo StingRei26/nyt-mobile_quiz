@@ -4,21 +4,42 @@
 console.group("mobileFXL-logs");
 
 var correctAnswerQueue = [];
-//var slideCounter = $(".slider").slick("getSlick").slideCount;
+var dataObject;
 
 
 // function to start slick gallery ---------------
 var initSlideshow = function(id) {
-  console.log("init slideshow");
+ // console.log("init slideshow");
+
+  userActionCounterinView (0);
 
   $('#' + id).slick({dots: true,infinite: false,focusOnSelect: false,speed: 50,fade: true});  // initiating slick gallery
+
+
+// $('#' + id).on("init reInit afterChange", function(currentSlide) {
+//   userActionCounterinView (currentSlide); // <------ tracking code here --------
+// });
 
   var currentSlide = $('#slider').slick('slickCurrentSlide');
   $('.slick-prev').toggle(currentSlide != 0);
   $('.slick-next').toggle(currentSlide != 2);
   $('#slider').one('afterChange', function(){$('.slick-prev,.slick-next').show();});
+
+  
+  //custom function showing current slide
+var $slickElement = $("#slider");
+
+$slickElement.on("afterChange", function(event,slick,currentSlide,nextSlide) {
+  //console.log(currentSlide);
+  userActionCounterinView (currentSlide);
+
+});
+
+
 };
 
+
+//userActionCounterinView (currentSlide);
 
 var createLogo = function (logoSrc) { $("#logo").css("background-image", "url('"+ logoSrc + "')");}  // dynamically setting the logo as background image
 
@@ -32,6 +53,16 @@ var createQuiz = function createQuiz(props) {
 
   self.handleChange = function (event) {
     event.preventDefault();
+
+     // tracking codes here  ----------------------------------------------------
+     var currentlySelectedBtnString = event.target.id;
+     var currentQuestionSlide = currentlySelectedBtnString.substr(4,1);
+     var currentSelectedOption = currentlySelectedBtnString.substr(6,1);
+     
+     customMetrics (currentQuestionSlide,currentSelectedOption);
+     // end of tracking code here -----------------------------------------------
+
+
     if (!self.state.selectedAnswerIndex) {
       console.log("selected index number: ",event.currentTarget.value);
       self.state.selectedAnswerIndex = event.currentTarget.value;
@@ -89,6 +120,8 @@ var createQuiz = function createQuiz(props) {
     var liClassNames = ['answer', isCorrect && 'isCorrect', isWrong && 'isWrong', isSelected && 'isNotHoverable'].filter(Boolean);
 
     var labelClassNames = [isSelected && 'hidePointer'].filter(Boolean);
+
+    correctAnswerQueue.push(self.props.correctAnswerIndex);
 
     var answerEl = document.createElement('li');
     answerEl.className = liClassNames.join(' ');
@@ -174,7 +207,9 @@ var createQuiz = function createQuiz(props) {
 
 
 function init (adData) {
-  console.log("ad-Data: ", adData);
+
+  dataObject = adData.EB;
+  //console.log("ad-Data: ", adData);
 
   document.getElementById("ad-stage").style.display = "block";
 
@@ -237,11 +272,109 @@ function init (adData) {
     src: 'images/car-small1.png',
     alt: 'Image alt text'
   });
+
+
+
+  $(document).ready(function() {
+    $(".image").click(function() {exits ("background");});
+    $(".mainContainer .adContainer #gradient-below-logo").click(function() {exits ("logo");});
+    $(".cta").click(function() {exits ("cta");});
+
+  }); 
+
+  
 }  // end of init function
 
 
 
 
+
+
+
+
+
+// tracking codes -------------------------------------------------------------------------------------------------
+
+function userActionCounterinView (whichOne) {
+
+  switch (whichOne) {
+      case 0:
+          dataObject.userActionCounter('inView-frame-1');
+          break;
+      case 1:
+          dataObject.userActionCounter('inView-frame-2');
+          break;
+      case 2:
+          dataObject.userActionCounter('inView-frame-3');
+          break;
+      case 3:
+          dataObject.userActionCounter('inView-frame-4');
+          break;
+      case 4:
+          dataObject.userActionCounter('inView-frame-5');
+  }
+}
+
+
+function calculateCorrectAnswer (q,o) {
+  var currentQ = Number(q) - 1;
+  var currentO = Number(o);
+ // console.log("calculate correct answer: ", currentQ, currentO);
+
+  if (correctAnswerQueue[currentQ] == currentO) {
+  //  console.log("answer is correct");
+    correctAnswerCount(currentQ);
+  }
+  else {
+  //  console.log("answer is incorrect");
+  }
+}
+
+
+function correctAnswerCount (whichOne) {
+  switch (whichOne) {
+      case 0:
+          dataObject.userActionCounter('correct-selected-for-question-1');
+          break;
+      case 1:
+          dataObject.userActionCounter('correct-selected-for-question-2');
+          break;
+      case 2:
+          dataObject.userActionCounter('correct-selected-for-question-3');
+          break;
+      case 3:
+          dataObject.userActionCounter('correct-selected-for-question-4');
+  }
+}
+
+
+function customMetrics (q,o) {
+  calculateCorrectAnswer (q,o);
+ // console.log("questions ",q, "   option: ",o);
+  var question = Number(q);
+  var option = Number(o);
+
+  if ((question == 1) && (option == 0)) {dataObject.userActionCounter('selected-Question-1-option-1');}
+  if ((question == 1) && (option == 1)) {dataObject.userActionCounter('selected-Question-1-option-2');}
+  if ((question == 1) && (option == 2)) {dataObject.userActionCounter('selected-Question-1-option-3');}
+  if ((question == 2) && (option == 0)) {dataObject.userActionCounter('selected-Question-2-option-1');}
+  if ((question == 2) && (option == 1)) {dataObject.userActionCounter('selected-Question-2-option-2');}
+  if ((question == 2) && (option == 2)) {dataObject.userActionCounter('selected-Question-2-option-3');}
+  if ((question == 3) && (option == 0)) {dataObject.userActionCounter('selected-Question-3-option-1');}
+  if ((question == 3) && (option == 1)) {dataObject.userActionCounter('selected-Question-3-option-2');}
+  if ((question == 3) && (option == 2)) {dataObject.userActionCounter('selected-Question-3-option-3');}
+}
+
+
+function exits (whichOne) {
+  if (whichOne == "logo")               { dataObject.clickthrough("Logo_Click");}
+  else if (whichOne == "cta")           { dataObject.clickthrough("CTA_Click");}
+  else if (whichOne == "background")    { dataObject.clickthrough("Background_Click");}
+
+//  console.log("exits: ", whichOne);
+}
+
+// end of tracking function here -----------------------------------------------------------------------------------
 
 
 
