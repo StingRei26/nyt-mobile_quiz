@@ -88,7 +88,7 @@ body {
   -o-object-fit: cover;
   object-fit: cover;
   float: left;
-  height: 220px;
+  height: 210px;
   width: 100%;
   max-width: 414px;
   min-width: 350px;
@@ -127,20 +127,20 @@ body {
 }*/
 .question {
   width: 332px;
-  height: 41px;
+  height: 51px;
   font-family: Proxima N W01 Reg;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.25;
+  line-height: 1.21;
   letter-spacing: normal;
   text-align: left;
   color: #3d3d3d;
   color: var(--greyish-brown);
   margin-left: 20px;
   position: absolute;
-  top: 219px; }
+  top: 211px; }
 
 /********************
  * ANSWERS
@@ -162,7 +162,7 @@ body {
   margin-top: 48px; }
 
 .answer {
-  border: 2px solid #000000;
+  /*border: 2px solid #000000;*/
   margin: 5px auto 10px;
   background-position: calc(100% - 22px) center;
   background-repeat: no-repeat;
@@ -194,12 +194,14 @@ body {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.44;
   padding: 9px 56px 12px 22px;
   /*color: #3d3d3d;*/
   color: #3d3d3d;
   color: var(--greyish-brown);
-  padding-top: 6px; }
+  padding-top: 6px; 
+  letter-spacing: normal;
+  }
 
 .answer label.hidePointer {
   cursor: auto; }
@@ -302,8 +304,8 @@ body {
   padding: 0 20px;
   /*color: rgba(0, 0, 0, 0.8);*/
   font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 13px;
+  line-height: 1.15;
   position: relative;
   font-family: Proxima N W01 Reg;
   margin-top: 5px;
@@ -402,7 +404,7 @@ body {
   /* border-radius: 5px; */
   width: 140px;
   height: 40px;
-  border: 2px solid #959595;
+  border: 1px solid #000000;;
   font-size: 15px;
   font-weight: bold;
   font-style: normal;
@@ -430,26 +432,28 @@ button {
 
 #quiz1 .header {
   position: absolute;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 100;
   font-family: Proxima N W01 Reg;
   width: 336px;
   /* height: 36px; */
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
   top: 221px;
   left: 20px;
   margin: auto;
   /* margin-top: 20px; */
   /* margin-bottom: 0px; */
-  padding-top: 20px; }
+  padding-top: 1px; 
+  line-height: 1.67;
+  }
 
 #quiz1 .answers {
-  margin-top: 86px; }
+  margin-top: 59px; }
 
 #quiz1 .question {
   position: absolute;
-  top: 251px; }
+  top: 228px; }
 
 #quiz1 .cta,
 #quiz2 .cta,

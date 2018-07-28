@@ -287,12 +287,6 @@ function init (adData) {
 
 
 
-
-
-
-
-
-
 // tracking codes -------------------------------------------------------------------------------------------------
 
 function userActionCounterinView (whichOne) {
