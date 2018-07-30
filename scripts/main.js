@@ -1,10 +1,14 @@
 
-'use strict';
+//'use strict';
+
+
+
+function init (adData) {
 
 console.group("mobileFXL-logs");
 
 var correctAnswerQueue = [];
-var dataObject;
+//var adData.EB;
 
 
 // function to start slick gallery ---------------
@@ -206,9 +210,8 @@ var createQuiz = function createQuiz(props) {
 
 
 
-function init (adData) {
 
-  dataObject = adData.EB;
+ // adData.EB = adData.EB;
   //console.log("ad-Data: ", adData);
 
   document.getElementById("ad-stage").style.display = "block";
@@ -221,7 +224,7 @@ function init (adData) {
     question: 'Who was the first president of the United States? Test your civics knowledge.',
     answers: ['George Washington', 'John Adams', 'Barack Obama'],
     cta:'',
-    correctAnswerIndex: '1',
+    correctAnswerIndex: '0',
     trivia: 'Washington was widely admired for his strong leadership qualities and was unanimously elected president by the Electoral College in the first two national elections.',
     id: 'quiz1',
     src: 'images/car-small1.png',
@@ -282,8 +285,7 @@ function init (adData) {
 
   }); 
 
-  
-}  // end of init function
+
 
 
 
@@ -299,19 +301,19 @@ function userActionCounterinView (whichOne) {
 
   switch (whichOne) {
       case 0:
-          dataObject.userActionCounter('inView-frame-1');
+          adData.EB.userActionCounter('inView-frame-1');
           break;
       case 1:
-          dataObject.userActionCounter('inView-frame-2');
+          adData.EB.userActionCounter('inView-frame-2');
           break;
       case 2:
-          dataObject.userActionCounter('inView-frame-3');
+          adData.EB.userActionCounter('inView-frame-3');
           break;
       case 3:
-          dataObject.userActionCounter('inView-frame-4');
+          adData.EB.userActionCounter('inView-frame-4');
           break;
       case 4:
-          dataObject.userActionCounter('inView-frame-5');
+          adData.EB.userActionCounter('inView-frame-5');
   }
 }
 
@@ -334,16 +336,16 @@ function calculateCorrectAnswer (q,o) {
 function correctAnswerCount (whichOne) {
   switch (whichOne) {
       case 0:
-          dataObject.userActionCounter('correct-selected-for-question-1');
+          adData.EB.userActionCounter('correct-selected-for-question-1');
           break;
       case 1:
-          dataObject.userActionCounter('correct-selected-for-question-2');
+          adData.EB.userActionCounter('correct-selected-for-question-2');
           break;
       case 2:
-          dataObject.userActionCounter('correct-selected-for-question-3');
+          adData.EB.userActionCounter('correct-selected-for-question-3');
           break;
       case 3:
-          dataObject.userActionCounter('correct-selected-for-question-4');
+          adData.EB.userActionCounter('correct-selected-for-question-4');
   }
 }
 
@@ -354,22 +356,22 @@ function customMetrics (q,o) {
   var question = Number(q);
   var option = Number(o);
 
-  if ((question == 1) && (option == 0)) {dataObject.userActionCounter('selected-Question-1-option-1');}
-  if ((question == 1) && (option == 1)) {dataObject.userActionCounter('selected-Question-1-option-2');}
-  if ((question == 1) && (option == 2)) {dataObject.userActionCounter('selected-Question-1-option-3');}
-  if ((question == 2) && (option == 0)) {dataObject.userActionCounter('selected-Question-2-option-1');}
-  if ((question == 2) && (option == 1)) {dataObject.userActionCounter('selected-Question-2-option-2');}
-  if ((question == 2) && (option == 2)) {dataObject.userActionCounter('selected-Question-2-option-3');}
-  if ((question == 3) && (option == 0)) {dataObject.userActionCounter('selected-Question-3-option-1');}
-  if ((question == 3) && (option == 1)) {dataObject.userActionCounter('selected-Question-3-option-2');}
-  if ((question == 3) && (option == 2)) {dataObject.userActionCounter('selected-Question-3-option-3');}
+  if ((question == 1) && (option == 0)) {adData.EB.userActionCounter('selected-Question-1-option-1');}
+  if ((question == 1) && (option == 1)) {adData.EB.userActionCounter('selected-Question-1-option-2');}
+  if ((question == 1) && (option == 2)) {adData.EB.userActionCounter('selected-Question-1-option-3');}
+  if ((question == 2) && (option == 0)) {adData.EB.userActionCounter('selected-Question-2-option-1');}
+  if ((question == 2) && (option == 1)) {adData.EB.userActionCounter('selected-Question-2-option-2');}
+  if ((question == 2) && (option == 2)) {adData.EB.userActionCounter('selected-Question-2-option-3');}
+  if ((question == 3) && (option == 0)) {adData.EB.userActionCounter('selected-Question-3-option-1');}
+  if ((question == 3) && (option == 1)) {adData.EB.userActionCounter('selected-Question-3-option-2');}
+  if ((question == 3) && (option == 2)) {adData.EB.userActionCounter('selected-Question-3-option-3');}
 }
 
 
 function exits (whichOne) {
-  if (whichOne == "logo")               { dataObject.clickthrough("Logo_Click");}
-  else if (whichOne == "cta")           { dataObject.clickthrough("CTA_Click");}
-  else if (whichOne == "background")    { dataObject.clickthrough("Background_Click");}
+  if (whichOne == "logo")               { adData.EB.clickthrough("Logo_Click");}
+  else if (whichOne == "cta")           { adData.EB.clickthrough("CTA_Click");}
+  else if (whichOne == "background")    { adData.EB.clickthrough("Background_Click");}
 
 //  console.log("exits: ", whichOne);
 }
@@ -379,3 +381,5 @@ function exits (whichOne) {
 
 
 
+  
+}  // end of init function
