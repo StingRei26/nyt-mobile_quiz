@@ -217,11 +217,12 @@ function init (adData) {
 
   createLogo('images/white@2x.png');
 
+
   createQuiz({
     question: 'Who was the first president of the United States? Test your civics knowledge.',
     answers: ['George Washington', 'John Adams', 'Barack Obama'],
     cta:'',
-    correctAnswerIndex: '1',
+    correctAnswerIndex: '0',
     trivia: 'Washington was widely admired for his strong leadership qualities and was unanimously elected president by the Electoral College in the first two national elections.',
     id: 'quiz1',
     src: 'images/car-small1.png',
